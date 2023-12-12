@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@project/hared/app/types": ["hared/app/types/src/index.ts"],
+      "@project/shared/app/types": ["shared/app/types/src/index.ts"],
+      "@project/shared/helpers": ["shared/helpers/src/index.ts"],
+      "@project/shared/my-library": ["shared/my-library/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
