@@ -16,9 +16,13 @@
     "baseUrl": ".",
     "paths": {
       "@project/hared/app/types": ["hared/app/types/src/index.ts"],
+      "@project/shared-types": ["shared-types/src/index.ts"],
       "@project/shared/app/types": ["shared/app/types/src/index.ts"],
+      "@project/shared/core": ["shared/core/src/index.ts"],
+      "@project/shared/helper": ["shared/helper/src/index.ts"],
       "@project/shared/helpers": ["shared/helpers/src/index.ts"],
-      "@project/shared/my-library": ["shared/my-library/src/index.ts"]
+      "@project/shared/my-library": ["shared/my-library/src/index.ts"],
+      "@project/shared/shared-types": ["shared/shared-types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
