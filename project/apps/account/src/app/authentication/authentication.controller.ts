@@ -36,7 +36,7 @@ export class AuthenticationController {
   @Post('login')
   public async login(@Body() dto: LoginUserDto) {
     const verifiedUser = await this.authService.verifyUser(dto);
-    return fillDto(LoggedUserRdo, verifiedUser);
+    return fillDto(LoggedUserRdo, verifiedUser.toPOJO());
   }
 
   @ApiResponse({
