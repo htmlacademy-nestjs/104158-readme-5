@@ -1,4 +1,5 @@
 import { ClassTransformOptions, plainToInstance } from 'class-transformer';
+import exp = require('constants');
 
 type PlainObject = Record<string, unknown>;
 
@@ -23,4 +24,9 @@ export function fillDto<T, V extends PlainObject>(
       excludeExtraneousValues: true,
       ...options,
   });
+}
+
+export function getMongoConnectionString({username, password, host, port, databaseName, authDatabase}): string {
+  // console.log(`mongodb://${username}:${password}@${host}:${port}/${databaseName}?authSource=${authDatabase}`)
+  return `mongodb://${username}:${password}@${host}:${port}/${databaseName}?authSource=${authDatabase}`;
 }
